@@ -106,13 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-BOT_TOKEN = "5823334614:AAF0fYzm-XA4TUBTMhiD0XywkB4smmx4XsE"
-WEBHOOK_URL = ""
+BOT_TOKEN = "5556478219:AAHSkSfVjaxKD8N2pwf3J05p5thHZCnRmJY"
+WEBHOOK_URL = "https://santexuz.onrender.com/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz'
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -123,11 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_URL = "/media/"
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
