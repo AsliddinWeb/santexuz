@@ -108,7 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 BOT_TOKEN = "5556478219:AAHSkSfVjaxKD8N2pwf3J05p5thHZCnRmJY"
-WEBHOOK_URL = "https://santexuz.onrender.com/"
+# WEBHOOK_URL = "https://santexuz.onrender.com/"
+WEBHOOK_URL = ""
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
