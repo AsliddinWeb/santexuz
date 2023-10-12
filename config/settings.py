@@ -86,7 +86,8 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://santexuz_db_user:8q3ywtE8PCGpRX6kspADeSSq5QedRnZn@dpg-ckjsokglk5ic73838tp0-a.oregon-postgres.render.com/santexuz_db")
+DATABASES["default"] = dj_database_url.parse(
+    "postgres://santexuz_db_user:8q3ywtE8PCGpRX6kspADeSSq5QedRnZn@dpg-ckjsokglk5ic73838tp0-a.oregon-postgres.render.com/santexuz_db")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -125,7 +126,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
