@@ -4,9 +4,6 @@ import re
 import time
 
 from django.conf import settings
-from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from telebot import TeleBot, types
 
 # from chat.models import Chat
@@ -21,30 +18,6 @@ from .utils import get_chat, get_full_name, chat_language_uz, chat_language_ru, 
 
 bot = TeleBot(token=settings.BOT_TOKEN)
 # bot.infinity_polling()
-
-class BotView(APIView):
-    def get(self, request, *args, **kwargs):
-        # bot.infinity_polling()
-        try:
-            bot.remove_webhook()
-            time.sleep(0.1)
-            bot.set_webhook(url="{}".format(settings.WEBHOOK_URL))
-        except Exception as e:
-            print(str(e))
-        return render(request, "bot.html")
-
-    def post(self, request, *args, **kwargs):
-        if request.META.get('CONTENT_TYPE') == 'application/json':
-            json_string = request.body.decode('utf-8')
-            update = types.Update.de_json(json_string)
-            try:
-                bot.process_new_updates([update])
-            except Exception as e:
-                print(str(e))
-            return Response(status=200)
-        else:
-            return Response(status=400)
-
 
 REQUIRED_TELEGRAM_CHANNELS = []
 
@@ -505,4 +478,4 @@ def send_next_plumbers_handler(call):
                 bot.send_message(chat_id=chat.chat_id, text=messages.SENT_ALL_PLUMBERS_RU,
                                  reply_markup=reply.districts_list(chat))
 
-# bot.infinity_polling()
+bot.infinity_polling()
