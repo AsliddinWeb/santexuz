@@ -25,12 +25,12 @@ bot = TeleBot(token=settings.BOT_TOKEN)
 class BotView(APIView):
     def get(self, request, *args, **kwargs):
         bot.infinity_polling()
-        # try:
-        #     bot.remove_webhook()
-        #     time.sleep(0.1)
-        #     bot.set_webhook(url="{}".format(settings.WEBHOOK_URL))
-        # except Exception as e:
-        #     print(str(e))
+        try:
+            bot.remove_webhook()
+            time.sleep(0.1)
+            bot.set_webhook(url="{}".format(settings.WEBHOOK_URL))
+        except Exception as e:
+            print(str(e))
         return render(request, "bot.html")
 
     def post(self, request, *args, **kwargs):

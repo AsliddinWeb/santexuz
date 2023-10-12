@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-BOT_TOKEN = "5556478219:AAHSkSfVjaxKD8N2pwf3J05p5thHZCnRmJY"
+BOT_TOKEN = "5556478219:AAGxECKEqCzkuUNk-A6_d_-SyWt9H0u1j24"
 # WEBHOOK_URL = "https://santexuz.onrender.com/"
 WEBHOOK_URL = ""
 
@@ -126,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STORAGES = {
