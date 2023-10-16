@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-BOT_TOKEN = "5556478219:AAGxECKEqCzkuUNk-A6_d_-SyWt9H0u1j24"
+BOT_TOKEN = "5556478219:AAEBtFgF-VNRG7p-kA_FqI0FoO13AywL9RQ"
 WEBHOOK_URL = "https://santexuz.pythonanywhere.com/"
 # WEBHOOK_URL = ""
 
