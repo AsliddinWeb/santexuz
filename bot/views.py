@@ -20,7 +20,7 @@ from .utils import get_chat, get_full_name, chat_language_uz, chat_language_ru, 
     is_subscribed, get_my_ann_msgs
 
 bot = TeleBot(token=settings.BOT_TOKEN)
-# bot.infinity_polling()
+bot.infinity_polling()
 
 class BotView(APIView):
     def get(self, request, *args, **kwargs):
