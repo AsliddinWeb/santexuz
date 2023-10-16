@@ -86,8 +86,8 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse(
-    "postgres://santexuz_db_user:8q3ywtE8PCGpRX6kspADeSSq5QedRnZn@dpg-ckjsokglk5ic73838tp0-a.oregon-postgres.render.com/santexuz_db")
+# DATABASES["default"] = dj_database_url.parse(
+#     "postgres://santexuz_db_user:8q3ywtE8PCGpRX6kspADeSSq5QedRnZn@dpg-ckjsokglk5ic73838tp0-a.oregon-postgres.render.com/santexuz_db")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 BOT_TOKEN = "5556478219:AAGxECKEqCzkuUNk-A6_d_-SyWt9H0u1j24"
-WEBHOOK_URL = "https://santexuz.onrender.com/"
+WEBHOOK_URL = "https://santexuz.pythonanywhere.com/"
 # WEBHOOK_URL = ""
 
 # Internationalization
